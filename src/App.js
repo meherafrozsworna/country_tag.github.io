@@ -1,11 +1,15 @@
 
-import React from "react";
+import React,{ useState } from "react";
 import './App.css';
+import Form from './components/form';
 
 function App() {
+  const [inputText,setInputText] = useState('');
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <h1>Hello world {inputText}</h1>
+      <Form inputText={inputText} setInputText={setInputText}/>
+      
     </div>
   );
 }
