@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import './form.css';
+import {Link} from 'react-router-dom';
 
-const Form = ({inputText,setInputText}) => {
+const Form = () => {
+    const [inputText, setInputText] = useState('');
+
     const handleChange = (e) => {
         console.log( e.target.value);
         setInputText(e.target.value);
     }
     
     const handleSubmit = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     }
 
     return(
@@ -20,7 +23,16 @@ const Form = ({inputText,setInputText}) => {
                 value={inputText}
                 onChange={handleChange}
             />
-            <button className="button" type="submit" onClick={handleSubmit}>Submit</button>
+            <Link to={{
+                pathname:"/tags",
+                state : {
+                    inputText : {inputText}
+                }
+            }}
+            >
+                <button className="btn" type="submit" onClick={handleSubmit}>Submit</button>
+            </Link>
+            
         </form>
       
         

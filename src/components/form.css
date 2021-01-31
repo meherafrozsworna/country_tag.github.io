@@ -1,6 +1,6 @@
 .form {
     margin: 0 auto;
-    width: 40%;
+    width: 60%;
     height: 150px;
     background-color: rgb(209, 206, 206);
     color: white;
@@ -19,7 +19,7 @@ input[type='text'] {
     font-size: 30px;
 }
 
-button {
+.btn {
     width: 100%;
     background-color: #081427;
     color: white;
@@ -30,6 +30,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+btn:hover {
     background-color: #24243b;
 }
